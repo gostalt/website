@@ -38,6 +38,13 @@ module.exports = {
                             offsetY: `30`,
                         },
                     },
+                    {
+                        resolve: `gatsby-remark-prismjs`,
+                        options: {
+                            classPrefix: "language-",
+                            noInlineHighlight: true,
+                        },
+                    },
                 ],
             },
         },

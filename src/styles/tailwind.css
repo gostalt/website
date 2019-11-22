@@ -29,7 +29,7 @@
 }
 
 .content pre {
-    @apply mb-8;
+    @apply mb-8 !important;
     @apply p-8;
 
     @apply bg-gray-100;
