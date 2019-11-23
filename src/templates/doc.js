@@ -14,7 +14,7 @@ export default function Template({ data }) {
                     <Nav />
                 </div>
                 <div className='w-3/4'>
-                    <h1 className='text-gray-800 text-4xl mb-2'>
+                    <h1 className='text-gray-800 text-4xl font-display font-bold mb-2'>
                         {frontmatter.title}
                     </h1>
                     <div

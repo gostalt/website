@@ -3,11 +3,11 @@ import { Link } from "gatsby";
 import Image from "../components/image";
 
 const Items = [
-    {
-        title: "Installation",
-        path: "/getting-started/installation",
-    },
-    { title: "Routing", path: "/getting-started/routing" },
+    // {
+    //     title: "Installation",
+    //     path: "/getting-started/installation",
+    // },
+    // { title: "Routing", path: "/getting-started/routing" },
     {
         title: "Validate",
         path: "/packages/validate",
