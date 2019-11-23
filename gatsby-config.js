@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "website",
     siteMetadata: {
         title: `Gostalt Docs`,
         description: `Documentation for the Gostalt Go Framework.`,
