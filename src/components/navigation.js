@@ -16,19 +16,22 @@ const Items = [
 
 const createNavigation = items => (
     <div className='sticky top-16'>
-        <div className='mb-4 pl-3'>
-            <Image />
+        <div className='pl-3 inline-block' style={{ textAlign: "center" }}>
+            <Link to=''>
+                <Image className='mb-2' />
+                <h2 className='mb-8 uppercase font-bold text-xs tracking-widest'>
+                    Gostalt
+                </h2>
+            </Link>
         </div>
         {items.map(item => (
-            <div className='mb-2'>
-                <Link
-                    activeClassName='border-red-200'
-                    className='border-l-4 pl-2 border-solid border-transparent hover:text-gray-600'
-                    to={item.path}
-                >
-                    {item.title}
-                </Link>
-            </div>
+            <Link
+                activeClassName='border-gray-400'
+                className='block py-1 border-l-4 pl-2 border-solid border-transparent hover:text-gray-600'
+                to={item.path}
+            >
+                {item.title}
+            </Link>
         ))}
     </div>
 );

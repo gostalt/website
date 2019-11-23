@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +22,11 @@
 
 .content h3 {
     @apply text-xl;
+}
+
+.content h4 {
+    @apply text-lg;
+    @apply mb-1;
 }
 
 .content p {
@@ -55,7 +62,7 @@
 
 .heading-anchor {
     float: initial;
-    margin: 0;
+    margin: 0 !important;
     @apply p-2;
     @apply flex;
     @apply flex-col;

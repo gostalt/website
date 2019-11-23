@@ -7,14 +7,15 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
     <Layout>
-        <SEO title='Home' />
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <Image />
+        <SEO title='~' />
+        <div className='flex flex-col items-center'>
+            <h1 className='font-display tracking-tight text-gray-700 leading-none text-6xl'>
+                Gostalt
+            </h1>
+            <p className='text-xl text-gray-500 tracking-tight'>
+                The Go Framework. Arriving 2020.
+            </p>
         </div>
-        <Link to='/page-2/'>Go to page 2</Link>
     </Layout>
 );
 

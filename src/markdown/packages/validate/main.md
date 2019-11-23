@@ -3,20 +3,20 @@ path: "/packages/validate"
 title: "Validate"
 ---
 
-Gostalt Validate provides an easy-to-use package for validating
-form values in Go. With it, you construct a ruleset, and use it
-to ensure that an incoming request is satisfied.
+Validate provides an easy-to-use package for validating form
+values in Go. With it, you construct a ruleset, and use that
+ruleset to ensure that an incoming request is satisfied.
 
 ## Usage
 
 Firstly, create a number of `Rule` items to check against. Each
-rule has a parameter and a callback that is ran to determine if
-the Rule passes or not.
+rule is made up of a parameter and a callback that is ran to
+determine if the Rule passes or not.
 
 Validate ships with a number of [built-in checks] that you can
-use:
+use. For example, the `validate.Alpha` check:
 
-[built-in checks]: /packages/validate/built-in
+[built-in checks]: #validators
 
 ```go
 alphaForename := validate.Rule{
@@ -49,8 +49,9 @@ and any number of rules, and returns a `Message` and an error:
 msgs, err := validate.Check(r, alphaForename, alphaSurname)
 ```
 
-It may be more succinct to create a variable or function that
-contains the rules, and use the spread operator:
+Depending on the number of rules for a given request, it may be
+more succinct to create a variable or function that contains the
+rules, and use the spread operator:
 
 ```go
 msgs, err := validate.Check(r, rules()...)
@@ -63,11 +64,12 @@ is pass in a ResponseWriter and the failed validation messages:
 
 ```go
 validate.Respond(w, msgs)
+return
 ```
 
 This will automatically write a `422 Unprocessable Entity` header
-and a `Content-Type: application/json` header to the response,
-then, the errors will be wrapped in an `error` object:
+and a `Content-Type: application/json` header to the response.
+Then, the errors will be wrapped in an `error` object:
 
 ```json
 {
@@ -129,7 +131,7 @@ passed in the Options struct.
 
 Fails if the parameter is not an email address.
 
-### MXEmail
+#### MXEmail
 
 Fails if the parameter is not an email address. This validator
 firstly uses the `Email` validator to determine if the email

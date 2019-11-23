@@ -4,6 +4,9 @@ module.exports = {
             "0": 0,
             "16": "4rem",
         },
+        fontFamily: {
+            "display": ['"DM Serif Display"'],
+        },
         extend: {},
     },
     variants: {},

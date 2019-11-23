@@ -25,11 +25,7 @@ const Layout = ({ children, title }) => {
             <div className='flex flex-col min-h-screen'>
                 <main className='my-16 w-3/5 m-auto'>{children}</main>
                 <footer className='bg-gray-100 flex-grow py-16'>
-                    <div className=' w-3/5 m-auto'>
-                        © {new Date().getFullYear()}, Built with
-                        {` `}
-                        <a href='https://www.gatsbyjs.org'>Gatsby</a>
-                    </div>
+                    <div className='text-gray-400 w-3/5 m-auto flex flex-col items-center'></div>
                 </footer>
             </div>
         </>
