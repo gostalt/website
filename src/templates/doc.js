@@ -11,11 +11,11 @@ export default function Template({ data }) {
     return (
         <Layout title={frontmatter.title}>
             <SEO title={frontmatter.title} />
-            <div className="flex">
-                <div className="w-1/4">
+            <div className="md:flex">
+                <div className="w-100 md:w-1/4">
                     <Nav />
                 </div>
-                <div className="w-3/4">
+                <div className="w-100 md:w-3/4">
                     <h1 className="text-gray-800 text-4xl font-display font-bold mb-2">
                         {frontmatter.title}
                     </h1>
