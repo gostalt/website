@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Image from "../components/image";
+import logo from "../images/gostalt.svg";
 
 const Items = [
     // {
@@ -17,10 +17,15 @@ const Items = [
 const createNavigation = items => (
     <div className="md:sticky md:top-16 mb-16 md:mb-0">
         <div className="text-center md:text-left">
-            <div className="pl-3 inline-block text-center md:text-left text-center">
+            <div className="md:pl-3 inline-block text-center md:text-left text-center">
                 <Link to="">
-                    <Image className="mb-2" />
-                    <h2 className="mb-8 uppercase font-bold text-xs tracking-widest">
+                    <img
+                        src={logo}
+                        className="mb-2"
+                        style={{ maxWidth: "80px" }}
+                        alt="The Gostalt Logo"
+                    />
+                    <h2 className="mb-8 uppercase font-bold text-xs text-center tracking-widest">
                         Gostalt
                     </h2>
                 </Link>

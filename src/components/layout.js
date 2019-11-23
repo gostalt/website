@@ -7,19 +7,8 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 
-const Layout = ({ children, title }) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `);
-
+const Layout = ({ children }) => {
     return (
         <>
             <div className="flex flex-col min-h-screen">

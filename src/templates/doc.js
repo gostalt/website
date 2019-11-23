@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import { Nav } from "../components/navigation";
 import SEO from "../components/seo";
@@ -16,7 +16,7 @@ export default function Template({ data }) {
                     <Nav />
                 </div>
                 <div className="w-100 md:w-3/4">
-                    <h1 className="text-gray-800 text-4xl font-display font-bold mb-2">
+                    <h1 className="text-gray-800 text-4xl font-display tracking-tight font-bold mb-2">
                         {frontmatter.title}
                     </h1>
                     <div
