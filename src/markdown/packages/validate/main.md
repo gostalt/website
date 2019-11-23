@@ -173,8 +173,10 @@ Fails if the parameter does not exist in the request.
 Fails if the value passed does not match the date pattern defined
 by RFC3339.
 
-However, you are free to create your own rules by passing a func
-to the Check field. The func must be compatible with `CheckFunc`:
+## Creating your Own Validators
+
+You are free to create your own rules by passing a func to the
+Check field. The func must be compatible with `CheckFunc`:
 
 ```go
 type CheckFunc func(*http.Request, string, Options) error
