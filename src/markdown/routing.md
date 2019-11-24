@@ -40,8 +40,8 @@ var routeCollections = []*route.Group{
 ### Route Group Prefixes
 
 The `Prefix` method can be chained onto a Collection to prefix
-each route in the collection with a given string. For example,
-to prefix all route URIs with "admin":
+each route in the group with a given string. For example, to prefix
+all route URIs with "admin":
 
 ```go
 var Admin = route.Collection(
@@ -68,7 +68,7 @@ var API = route.Collection(
 ## Routes
 
 Inside this `route.Collection` function call, you should add all
-the routes that you wish to belong to this collection:
+the routes that you wish to belong to this route group:
 
 ```go
 package routes
@@ -121,9 +121,11 @@ func GreetingHandler(w http.ResponseWriter, r *http.Request) {
 
 > **Note:** route parameters are prefixed with `:` to prevent them
 > from overwriting existing values in the request. This functionality
-> is handled by the `AddURIParametersToRequest` middleware. If
+> is handled by the `AddURIParametersToRequest` [middleware]. If
 > you're interested in adding this feature to your own route groups,
 > ensure you add it to your route group definition's middleware.
+
+[middleware]: https://github.com/gostalt/framework/blob/master/route/middleware/AddURIParametersToRequest.go
 
 ### Redirect Routes
 
