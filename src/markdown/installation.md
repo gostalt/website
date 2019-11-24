@@ -24,10 +24,16 @@ go build
 Use the created `gostalt` binary to serve the website. Before you
 run it, you'll need to ensure you have environment variables set
 for `HOST` and `PORT`. These can be set in your system's environment
-or by copying the existing `.env.example` file to `.env`:
+or by copying the existing `.env.example` file to `.env`.
 
 ```shell
 $ HOST=localhost PORT=8080 ./gostalt serve
+  Info: Server running at localhost:8080
+
+  # or
+
+$ cp .env.example .env
+$ ./gostalt serve
   Info: Server running at localhost:8080
 ```
 

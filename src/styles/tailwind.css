@@ -68,3 +68,14 @@
     @apply flex-col;
     @apply justify-center;
 }
+
+.content blockquote p {
+    @apply pl-2;
+    @apply py-3;
+    @apply bg-gray-100;
+    @apply border-solid;
+    @apply border-l-4;
+    @apply border-blue-400;
+    @apply italic;
+    @apply text-gray-600;
+}
