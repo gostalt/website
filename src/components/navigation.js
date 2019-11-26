@@ -14,6 +14,11 @@ const Items = [
         section: "getting-started",
     },
     {
+        title: "Deployment SSL",
+        path: "/deploy/ssl",
+        section: "getting-started",
+    },
+    {
         title: "Validate",
         path: "/packages/validate",
         section: "packages",
