@@ -16,7 +16,8 @@ Route groups live in the `routes` folder of your Gostalt app. To
 create a new route group, create a new file in this directory.
 For example, `routes/admin.go`.
 
-In this file, you should create a new variable of type `route.Collection`:
+In this file, you should create a new variable and assign it the
+result of a call to the `route.Collection` function:
 
 ```go
 package routes
