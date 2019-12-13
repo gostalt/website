@@ -139,6 +139,18 @@ address matches a pattern, but then also looks up the MX records
 of the email domain to more accurately determine if an email
 address exists.
 
+#### TelnetEmail
+
+Fails if the parameter is not an email address. This validator
+uses the `MXEmail` validator to find an MX record for the domain,
+and then dials into it to determine if the email address given
+is a real email address.
+
+This is the most accurate way to determine if an email address
+is valid, but it is slower and relies on external checks.
+
+> Support for Microsoft Outlook (Office365, Hotmail, etc) is patchy.
+
 ### Integer
 
 Fails if the parameter is not an integer. Uses the regex `^[0-9]+`
