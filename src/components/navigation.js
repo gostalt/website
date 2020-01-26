@@ -9,14 +9,44 @@ const Items = [
         section: "getting-started",
     },
     {
+        title: "Config",
+        path: "/getting-started/config",
+        section: "getting-started",
+    },
+    {
         title: "Routing",
         path: "/getting-started/routing",
         section: "getting-started",
     },
     {
-        title: "Deployment SSL",
-        path: "/deploy/ssl",
+        title: "Handlers",
+        path: "/getting-started/handlers",
         section: "getting-started",
+    },
+    {
+        title: "Views and Templates",
+        path: "/getting-started/views-and-templates",
+        section: "getting-started",
+    },
+    {
+        title: "Commands",
+        path: "/advanced/commands",
+        section: "advanced",
+    },
+    {
+        title: "Deployment SSL",
+        path: "/advanced/automatic-ssl",
+        section: "advanced",
+    },
+    {
+        title: "Scheduling",
+        path: "/advanced/scheduling",
+        section: "advanced",
+    },
+    {
+        title: "Container",
+        path: "/advanced/container",
+        section: "advanced",
     },
     {
         title: "Validate",
@@ -44,6 +74,22 @@ const createNavigation = items => (
                 </h3>
                 {items
                     .filter(item => item.section === "getting-started")
+                    .map(item => (
+                        <Link
+                            activeClassName="border-gray-400"
+                            className="block py-1 border-l-4 pl-2 border-solid border-transparent hover:text-gray-600"
+                            to={item.path}
+                        >
+                            {item.title}
+                        </Link>
+                    ))}
+            </section>
+            <section class="mb-4">
+                <h3 className="mb-2 uppercase text-xs text-gray-500 font-semibold">
+                    Advanced
+                </h3>
+                {items
+                    .filter(item => item.section === "advanced")
                     .map(item => (
                         <Link
                             activeClassName="border-gray-400"

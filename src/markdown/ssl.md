@@ -1,6 +1,6 @@
 ---
-path: "/deploy/ssl"
-title: "SSL"
+path: "/advanced/automatic-ssl"
+title: "Automatic SSL"
 ---
 
 When deploying your app to production, Gostalt will automatically
