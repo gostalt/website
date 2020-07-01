@@ -5,38 +5,26 @@ title: "Installation"
 
 To compile the Gostalt binary, the latest version of Go is recommended.
 
-## Downloading
+## Using the Gostalt CLI Tool
 
-To get started, you'll need to download a copy of the Gostalt repository
-to your local filesystem. The easiest way to do this is using `git`:
+The easiest way to get started is to download the Gostalt CLI utility. To do so,
+run `go get -u github.com/gostalt/cli`.
+
+Once installed, the `gostalt new` command will create a new Gostalt project in the
+directory you specify. For example, to create a new project called `blog`:
 
 ```shell
-git clone https://github.com/gostalt/gostalt
+gostalt new blog
 ```
 
-After you've downloaded the repo, navigate to it and run `go build`:
+The utility will feed back on the progress of creating the new project. Once the
+command has finished, navigate to the directory and run `./gostalt serve` to start
+the project locally.
 
 ```shell
-cd gostalt
-go build
-```
-
-Use the created `gostalt` binary to serve the website. Before you
-run it, you'll need to ensure you have environment variables set
-for `HOST` and `PORT`. These can be set in your system's environment
-or by copying the existing `.env.example` file to `.env`.
-
-```shell
-$ HOST=localhost PORT=8080 ./gostalt serve
-  Info: Server running at localhost:8080
-
-  # or
-
-$ cp .env.example .env
 $ ./gostalt serve
-  Info: Server running at localhost:8080
+Info: Server running at http://localhost:8080
 ```
 
-That's it! You should see a message to let you know that your app
-is running on the provided ports. Visit the address in your browser
-and you'll see the Gostalt splash screen.
+By default, Gostalt is set to run on port `8080` locally. You can override this by
+changing the `PORT` value in `.env` file in the root of the project.
