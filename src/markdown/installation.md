@@ -3,7 +3,30 @@ path: "/getting-started/installation"
 title: "Installation"
 ---
 
-To compile the Gostalt binary, the latest version of Go is recommended.
+## Cloning the Repository
+
+To get started quickly, clone the `fresh` repository to your local machine:
+
+```shell
+git clone https://github.com/gostalt/fresh.git blog
+```
+
+Once the repo has been cloned successfully, you should copy the example .env
+file:
+
+```shell
+cd blog
+cp .env.example .env
+```
+
+To start the project locally, just run:
+
+```shell
+./gostalt serve
+```
+
+By default, Gostalt is set to run on port `8080` locally. You can override this by
+changing the `PORT` value in `.env` file in the root of the project.
 
 ## Using the Gostalt CLI Tool
 
@@ -25,6 +48,3 @@ the project locally.
 $ ./gostalt serve
 Info: Server running at http://localhost:8080
 ```
-
-By default, Gostalt is set to run on port `8080` locally. You can override this by
-changing the `PORT` value in `.env` file in the root of the project.
